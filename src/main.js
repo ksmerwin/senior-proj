@@ -2,13 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 
+
 Vue.config.productionTip = false
 
 
 export const appData = {
     app_icon: 'code',
     body_message: 'Hello world!',
-    footer_message: 'Made with ❤️ in Mountain View, California',
+    footer_message: ' ❤️ ',
     title: 'Vue, Vuetify, Webpack',
     time: new Date(),
 };

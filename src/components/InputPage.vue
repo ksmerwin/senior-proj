@@ -1,15 +1,53 @@
 <template>
+  <div>
+    <h1>
+      Calorie Counter for Cats
+    </h1>
+    <p>Welcome to Calorie Counter for Cats! Walking to class is something that we all do here at K-State. 
+      Knowing how many calories you burn from your daily walk can help you reach your health goals! Below you can 
+      enter your information and then be redirected to a page to enter in your schedule. Thanks and stay healthy!
+    </p>
+    <h2>About You!</h2>
+    <form id="info" j>
+
+    <input type="text" :class="personal" v-bind:value="firstname" placeholder="First Name">
+    <input type="text" v-bind:value="lastname" placeholder="Last Name">
+    <br>
+    <input type="text" v-bind:value="major" placeholder="Major">
+    <br>
+    <input type="radio" name="picked" v-bind:value="m" v-model="picked"> 
+    <label for="m">Male</label>
+    <input type="radio" name="picked" v-bind:value="f" v-model="picked"> 
+    <label for="f">Female</label>
+    <br>
+    <input type="text" v-bind:value="weight" placeholder="Weight">
+    <input type="text" v-bind:value="weight" placeholder="Age">
+    <br>
+    <button>Submit</button>
+    <!--may have to v-bind:disabled to make sure all forms are are filled. onclick-->
+    </form>
+  </div>
+</template>
+
+
+
+<script>
+export default {
+  name: 'InputPage',
+  data: () => ({
+      m: 0,
+      f: 1
+  })
+}
+</script>
+
+
+
+
+<!--<template>
   <v-container>
     <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
-
+      
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
           Calorie Counter for Cats
@@ -29,15 +67,7 @@
         </h2>
 
         <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
+          <input type="text" placeholder="First Name">
         </v-row>
       </v-col>
 
@@ -88,7 +118,7 @@
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'InputPage',
 
     data: () => ({
       ecosystem: [
@@ -144,3 +174,4 @@
     }),
   }
 </script>
+-->

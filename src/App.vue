@@ -16,20 +16,20 @@
 
 
     <v-main>
-      <HelloWorld/>
+      <InputPage/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import InputPage from './components/InputPage';
 import {appData} from './main';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    InputPage,
   },
   data: () => {
     return appData
