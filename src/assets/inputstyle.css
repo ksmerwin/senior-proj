@@ -14,4 +14,13 @@
 
 .description {
     width: 550px;
+    margin-left: 35px;
+}
+
+.name {
+    margin-left: 25px;
+}
+
+.inp {
+    margin-left: 50px;
 }

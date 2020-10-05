@@ -1,25 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import vuetify from './plugins/vuetify';
-import './assets/inputstyle.css'
+import './assets/inputstyle.css';
+import router from './router'
 
 
 Vue.config.productionTip = false
 
-
-export const appData = {
-    app_icon: 'code',
-    body_message: 'Hello world!',
-    footer_message: ' ❤️ ',
-    title: 'Vue, Vuetify, Webpack',
-    time: new Date(),
-};
-
-setInterval(() => {
-    appData.time = new Date()
-}, 1000);
-
 new Vue({
-    vuetify,
+    el: '#app',
+    router,
     render: h => h(App)
 }).$mount('#app');

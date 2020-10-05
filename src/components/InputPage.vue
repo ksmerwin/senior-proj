@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>
+    <header>
+
+    <h1 class="name">
       Calorie Counter for Cats
     </h1>
     <p class="description">Welcome to Calorie Counter for Cats! Walking to class is something that we all do here at K-State. 
@@ -8,6 +10,7 @@
       enter your information and then be redirected to a page to enter in your schedule. Thanks and stay healthy!
     </p>
    
+    </header>
 
     <div class="inp">
 
@@ -25,8 +28,9 @@
     <input type="text" class="personal" v-bind:value="weight" placeholder="Weight">
     <input type="text" class="personal" v-bind:value="weight" placeholder="Age">
     <br>
-    <button class="next">Next</button>
-    <!--may have to v-bind:disabled to make sure all forms are are filled. onclick-->
+  
+    <button class="next" @click="goSchedule()">Next</button>
+    <!--may have to v-bind:disabled to make sure all forms are are filled. v-on:click-->
     
     </div>
      
@@ -41,7 +45,13 @@ export default {
   data: () => ({
       m: 0,
       f: 1
-  })
+  }),
+  methods: {
+    goSchedule: function() {
+    this.$router.push({name:"SchedulePage"}) 
+    }
+
+  }
 }
 </script>
 
