@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import InputPage from '@/components/InputPage'
-import ResultsPage from '@/components/ResultsPage'
-import SchedulePage from '@/components/SchedulePage'
+import InputPage from '@/components/InputPage.vue'
+import ResultsPage from '@/components/ResultsPage.vue'
+import SchedulePage from '@/components/SchedulePage.vue'
 
 
 Vue.use(VueRouter)
@@ -10,6 +10,8 @@ Vue.use(VueRouter)
 
 
 export default new VueRouter({
+    mode: 'history',
+    base: process.env.BASE_URL,
     routes: [{
             path: '/',
             name: 'InputPage',
@@ -22,7 +24,7 @@ export default new VueRouter({
             component: SchedulePage
         },
         {
-            path: './ResultsPage',
+            path: '/ResultsPage',
             name: 'ResultsPage',
             component: ResultsPage
         }
