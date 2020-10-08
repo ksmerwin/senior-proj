@@ -19,7 +19,10 @@
     <input type="text" class="personal" v-bind:value="weight" placeholder="Age">
     <br>
   
+    <router-link to="/SchedulePage">
     <button class="next">Next</button>
+    </router-link>
+    
     <!--may have to v-bind:disabled to make sure all forms are are filled. v-on:click-->
     
     </div>
