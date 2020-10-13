@@ -5,18 +5,18 @@
     <div class="inp">
 
     <h2>About You!</h2> 
-    <input type="text" class="personal" v-bind:value="firstname" placeholder="First Name">
-    <input type="text" class="personal" v-bind:value="lastname" placeholder="Last Name">
+    <input type="text" v-model="firstname" class="personal"  placeholder="First Name">
+    <input type="text" class="personal" v-model="lastname" placeholder="Last Name">
     <br>
-    <input type="text" class="personal" v-bind:value="major" placeholder="Major">
+    <input type="text" class="personal" v-model="major" placeholder="Major">
     <br>
-    <input type="radio" class="personal" name="picked" v-bind:value="m" v-model="picked"> 
+    <input type="radio" class="personal" name="picked"  v-model="picked"> 
     <label for="m">Male</label>
-    <input type="radio" class="personal" name="picked" v-bind:value="f" v-model="picked"> 
+    <input type="radio" class="personal" name="picked"  v-model="picked"> 
     <label for="f">Female</label>
     <br>
-    <input type="text" class="personal" v-bind:value="weight" placeholder="Weight">
-    <input type="text" class="personal" v-bind:value="weight" placeholder="Age">
+    <input type="text" class="personal" v-model="weight" placeholder="Weight">
+    <input type="text" class="personal" v-model="age" placeholder="Age">
     <br>
   
     <router-link to="/SchedulePage">
@@ -25,6 +25,7 @@
     
     <!--may have to v-bind:disabled to make sure all forms are are filled. v-on:click-->
     
+    <span>Your info: {{firstname}}</span>
     </div>
      
   </div>
@@ -38,7 +39,12 @@ export default {
   name: 'InputPage',
   data: () => ({
       m: 0,
-      f: 1
+      f: 1,
+      firstname: '',
+      lastname: '',
+      major: '',
+      weight: '',
+      age: ''
   })
 }
 </script>

@@ -22,7 +22,7 @@
 <style>
 body {
   margin:0;
-  background-color: #000000;
+  
 }
 
 #title{
@@ -38,7 +38,7 @@ body {
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(rgb(177, 15, 177), rgb(105, 6, 105), black);
+  background: linear-gradient(rgb(177, 15, 177), rgb(105, 6, 105), white);
 }
 
 
