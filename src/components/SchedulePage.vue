@@ -4,7 +4,12 @@
 
         <h3 style="margin: 15px">M/W/F SCHEDULE</h3>
         <ul> 
-        <li v-for="n in numberofclasses" :key="n.value" >
+        <!--number of classes select-->
+        <select class="form-control" name="classes" v-model="selected">
+        <option v-for="n in numberofclasses" :key="n.value"  >{{n.value}}</option>
+        </select>
+        <!--MWF Route Select-->
+        <li v-for="n in numberofclasses" :key="n.value">
         First Building <select name="MWF">
         <option disabled value="">Please select one</option>
         <option  v-for="route in route" :key="route" >{{route.buildingstart}}</option> 
@@ -43,13 +48,14 @@
         </select>
         </li>
         </ul>-->
-        <select class="form-control" name="classes">
-        <option v-for="n in numberofclasses" :key="n.value" :value="n.value" >{{n.value}}</option>
-        </select>
 
-        <span>number of classes: {{numberofclasses}}</span>
+        <span>
+            selected: {{selected}}
+        </span>
     <br>
     <br>
+
+
     <h3 style="margin: 15px">T/U SCHEDULE</h3>
         <ul> 
         <li v-for="n in numberofclasses" :key="n.value" >
@@ -71,9 +77,12 @@
         <option v-for="n in numberofclasses" :key="n.value" :value="n.value" >{{n.value}}</option>
         </select>
 
+
+     <router-link to="/ResultsPage">
+    <button class="next">Calculate Calories!</button>
+    </router-link>
+
     </div>
-
-
 
 
 

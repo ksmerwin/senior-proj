@@ -11,7 +11,7 @@
     </p>
     </header>
     <div class="container">
-    <router-link to="/">Input</router-link>
+    <router-link to="/">Home Input</router-link>
     
     </div>
     <router-view/>
