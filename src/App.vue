@@ -33,12 +33,9 @@ body {
 }
 
 #app {
-  height: 100vh;
-  width: 100vw;
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(rgb(177, 15, 177), rgb(105, 6, 105), white);
+  
+  font-family: "ArchitectsDaughter", Helvetica, sans-serif;
+  background: rgb(199, 121, 213);
 }
 
 
@@ -51,6 +48,13 @@ body {
     margin-left: 25px;
 }
 
+
+
+@font-face {
+  font-family: "ArchitectsDaughter";
+  src: local("ArchitectsDaughter"),
+   url(./fonts/ArchitectsDaughter-Regular.ttf) format("truetype");
+}
 
 </style>
 

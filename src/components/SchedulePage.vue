@@ -79,7 +79,7 @@
 
 
      <router-link to="/ResultsPage">
-    <button class="next">Calculate Calories!</button>
+    <button>Calculate Calories!</button>
     </router-link>
 
     </div>
@@ -91,6 +91,10 @@
 
 
 <style>
+body{
+    background:rgb(199, 121, 213)
+}
+
  li{
      margin:4px;
      
@@ -99,6 +103,13 @@
  select{
      margin:4px;
  }
+
+ button{border-radius: 4px;
+    border: 2px solid black;
+    padding: 5px 30px 5px 30px;
+    font-family: "ArchitectsDaughter";
+    font-weight: bolder;
+    margin:20px}
 </style>
 
 
