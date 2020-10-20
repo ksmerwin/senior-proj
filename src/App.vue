@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    
      <header>
 
     <div id="title">
@@ -12,7 +13,7 @@
     </header>
     <div class="container">
     <router-link to="/">Home Input</router-link>
-    
+    <router-link to="/register">About</router-link><span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>
     </div>
     <router-view/>
 
@@ -33,9 +34,11 @@ body {
 }
 
 #app {
+  height: 100vh;
+  width: 100vw;
   
   font-family: "ArchitectsDaughter", Helvetica, sans-serif;
-  background: rgb(199, 121, 213);
+  background: rgb(215, 143, 228);
 }
 
 
@@ -63,7 +66,18 @@ body {
 
 export default {
   name: 'App',
-
+  omputed : {
+      isLoggedIn : function(){ return this.$store.getters.isLoggedIn}
+    },
+    methods: {
+      logout: function () {
+        this.$store.dispatch('logout')
+        .then(() => {
+          this.$router.push('/login')
+        })
+      }
+    },
   
 };
 </script>
+

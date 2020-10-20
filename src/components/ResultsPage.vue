@@ -18,7 +18,18 @@
         <router-link to="/SchedulePage">
     <button>Change Schedule</button>
     </router-link>
+    <router-link to="/">
+    <button>Home</button>
+    </router-link>
+    <router-link to="/">
+    <button>Save</button>
+    </router-link>
+    <router-link to="/">
+    <button>See Route</button>
+    </router-link>
     </div>
+    
+
 </template>
 
 
@@ -44,7 +55,6 @@ h2{
 button {
     float: right;
     margin-left: 10px;
-    margin-right: 20px;
     border-radius: 4px;
     border: 2px solid black;
     padding: 5px 30px 5px 30px;
