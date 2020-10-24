@@ -12,8 +12,11 @@
     </p>
     </header>
     <div class="container">
-    <router-link to="/">Home Input</router-link>
-    <router-link to="/register">About</router-link><span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span>
+    <router-link to="/">Login</router-link>  <br>
+    <router-link to="/InputPage">Input</router-link> <br>
+    <router-link to="/register">register</router-link><span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span> <br>
+    <router-link to="/SchedulePage">Schedule</router-link> <br>
+    <router-link to="/ResultsPage">Results</router-link> <br>
     </div>
     <router-view/>
 
@@ -23,7 +26,10 @@
 <style>
 body {
   margin:0;
-  
+}
+
+.container{
+  margin-left: 10px;
 }
 
 #title{

@@ -10,12 +10,17 @@
         "electron:serve": "vue-cli-service electron:serve",
         "postinstall": "electron-builder install-app-deps",
         "postuninstall": "electron-builder install-app-deps",
-        "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+        "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+        "server": "node src/server/app"
     },
     "main": "main.js",
     "dependencies": {
         "axios": "^0.20.0",
+        "bcrypt": "^5.0.0",
+        "body-parser": "^1.19.0",
         "core-js": "^3.6.5",
+        "jsonwebtoken": "^8.5.1",
+        "sqlite3": "^5.0.0",
         "vue": "^2.6.11",
         "vue-router": "^3.4.5",
         "vuetify": "^2.2.11",
