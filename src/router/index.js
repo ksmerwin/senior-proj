@@ -21,18 +21,18 @@ let router = new VueRouter({
     routes: [{
 
             path: '/',
+            name: 'InputPage',
+            component: InputPage
+        },
+
+        {
+
+            path: '/login',
             name: 'login',
             component: Login,
             meta: {
                 guest: true
             }
-        },
-
-        {
-
-            path: '/InputPage',
-            name: 'InputPage',
-            component: InputPage
         },
 
         {

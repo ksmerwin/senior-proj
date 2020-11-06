@@ -12,11 +12,13 @@
     </p>
     </header>
     <div class="container">
-    <router-link to="/">Login</router-link>  <br>
-    <router-link to="/InputPage">Input</router-link> <br>
+    <!--<router-link to="/login">login</router-link> <br>
+    <router-link to="/">InputPage</router-link>  <br>
+    <router-link to="/secure">secure</router-link> <br>
     <router-link to="/register">register</router-link><span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span> <br>
     <router-link to="/SchedulePage">Schedule</router-link> <br>
     <router-link to="/ResultsPage">Results</router-link> <br>
+  -->
     </div>
     <router-view/>
 
@@ -40,8 +42,8 @@ body {
 }
 
 #app {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   
   font-family: "ArchitectsDaughter", Helvetica, sans-serif;
   background: rgb(215, 143, 228);

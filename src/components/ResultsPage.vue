@@ -16,17 +16,23 @@
         <h2>TU calories a day: {{TUcal}}</h2>
         <h2>Total Calories burned a week: {{totalcal}}</h2>
         <router-link to="/SchedulePage">
-    <button>Change Schedule</button>
+    <button id="change">Change Schedule</button>
     </router-link>
+    <br>
+    <br>
+    <br>
+    <br>
     <router-link to="/">
-    <button>Home</button>
+    <button id="home">Home</button>
     </router-link>
+
+    <!--<router-link to="/">
     <router-link to="/">
     <button>Save</button>
     </router-link>
-    <router-link to="/">
     <button>See Route</button>
     </router-link>
+    -->
     </div>
     
 
@@ -52,9 +58,21 @@ h2{
     
 }
 
-button {
+#change {
     float: right;
     margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 2px solid black;
+    padding: 5px 30px 5px 30px;
+    font-family: "ArchitectsDaughter";
+    font-weight: bolder
+}
+
+#home {
+    float: right;
+    margin-left: 10px;
+    margin-right: 50%;
     border-radius: 4px;
     border: 2px solid black;
     padding: 5px 30px 5px 30px;
