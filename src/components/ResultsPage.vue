@@ -45,7 +45,8 @@
     margin: 20px 20px 0px 20px;
     border:solid black;
     border-width: 4px;
-    height: 400px;
+    height: 374px;
+    width: 720px;
 }
 
 #calculations{
@@ -55,6 +56,7 @@
 
 h2{
     margin-left:10px;
+
     
 }
 
@@ -62,6 +64,7 @@ h2{
     float: right;
     margin-left: 10px;
     margin-right: 10px;
+    
     border-radius: 4px;
     border: 2px solid black;
     padding: 5px 30px 5px 30px;
@@ -70,9 +73,7 @@ h2{
 }
 
 #home {
-    float: right;
-    margin-left: 10px;
-    margin-right: 50%;
+    margin-left:50%;
     border-radius: 4px;
     border: 2px solid black;
     padding: 5px 30px 5px 30px;
@@ -100,9 +101,10 @@ export default {
       weight: '164',
       age: '23',
       sex: 'Male',
-      MWFcal: 0,
-      TUcal: 0,
-      totalcal: 0
+      MWFcal: 72, 
+    
+      TUcal: 70,
+      totalcal: 142
   })
 }
 </script>
