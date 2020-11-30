@@ -13,27 +13,47 @@
     </p>
     </header>
     <div class="container">
-    <!--<router-link to="/login">login</router-link> <br>
-    <router-link to="/">InputPage</router-link>  <br>
-    <router-link to="/secure">secure</router-link> <br>
-    <router-link to="/register">register</router-link><span v-if="isLoggedIn"> | <a @click="logout">Logout</a></span> <br>
-    <router-link to="/SchedulePage">Schedule</router-link> <br>
-    <router-link to="/ResultsPage">Results</router-link> <br>
-  -->
+
   <h2>Your weekly routes</h2>
-    <p v-if="createdRoutes.length == 0">
+    <p style="background-color: white;
+              border-radius: 6px;
+              padding-left: 15px;
+              width: fit-content;
+              margin-left: 15px;
+    " v-if="createdRoutes.length == 0">
       No routes added to your schedule yet.
     </p>
     <ul>
-      <li class="route" v-for="route in createdRoutes" :key="route.id">
-        {{ route.label  }}
-        <span class="remove" @click="removeRoute(route)">Remove</span>
+      <li
+      style="
+      background-color: white;
+              border-radius: 6px;
+              padding-left: 15px;
+              width: fit-content;
+              margin-left: 15px;
+      "  
+      class="route" v-for="route in createdRoutes" :key="route.id">
+        {{route.label}}
+
+
+        {{route.id}}
+        <span class="remove" @click="removeRoute(route)">X</span>
       </li>
     </ul>
-
+    <br>
     <h3>Add a new route to your schedule</h3>
-    <div>
-      <label for="new_route_start_building">Starting building: </label>
+    <div class="select">
+    <br>
+    <br>
+    <br>
+      <label style="
+      background-color: lightgrey;
+              border-radius: 6px;
+              padding-left: 5px;
+              width: 300px;
+              margin-left: 15px;
+      " for="new_route_start_building">Starting building: </label>
+      
       <select name="new_route_start_building" v-model="newRouteBuildingStartId">
         <option disabled value="">Select a building</option>
         <option
@@ -44,8 +64,16 @@
         >
       </select>
     </div>
-    <div>
-      <label for="new_route_end_building">Ending building: </label>
+    
+    <div class="select">
+      <label style="
+      background-color: lightgrey;
+              border-radius: 6px;
+              padding-left: 5px;
+              width: 300px;
+              margin-left: 15px;
+      " for="new_route_end_building">Ending building: </label>
+
       <select name="new_route_end_building" v-model="newRouteBuildingEndId">
         <option disabled value="">Select a building</option>
         <option
@@ -56,6 +84,9 @@
         >
       </select>
     </div>
+    <br>
+    <br>
+    <br>
     <button @click="addNewRoute">Add new route</button>
 
     <h2>Total Calories: {{ totalCalories }}</h2>
@@ -67,7 +98,9 @@
 
 <style>
 body {
+  background-color:  rgb(81, 40, 136) !important;
   margin:0;
+
 }
 
 .container{
@@ -77,22 +110,28 @@ body {
 #title{
   font-size: 45px;
   font-weight: bolder;
-  margin: 5px;
-  padding:0;
+  margin: 15px;
+  padding-left: 15px;
+    background-color: lightgrey;
+    border-radius: 6px;
+  width: 550px;
+  
 }
 
 #campusCalorieCounterApp {
   height: 100%;
   width: 100%;
-  
   font-family: "ArchitectsDaughter", Helvetica, sans-serif;
-  background: rgb(215, 143, 228);
 }
 
 
-.description {
-    width: 550px;
-    margin-left: 35px;
+p.description {
+    width: 650px;
+    margin-left:15px;
+    background-color:white;
+    border-radius: 6px;
+    padding: 15px;
+    
 }
 
 .name {
@@ -112,15 +151,35 @@ body {
 }
 
 .route .remove {
-  background-color: white;
-  color: black;
-  border-radius: 6px;
-  padding: 6px;
+      font-size: 20px;
+    color: red;
+    margin-right: 4px;
+}
+
+h2, h3 {
+    padding-left: 5px;
+    background-color: lightgrey;
+    border-radius: 6px;
+    width: fit-content;
+    padding:5px;
 }
 
 ul {
   list-style-type: none;
 }
+
+.select{
+  display: inline;
+}
+
+button{
+font-size: 15px;
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  padding: 3px;
+  margin-left: 225px;
+  }
 
 </style>
 
@@ -1397,7 +1456,7 @@ export default {
     addNewRoute() {
       this.createdRoutes.push(
         createRoute(this.newRouteStartBuilding, this.newRouteEndBuilding)
-      );
+      )
     },
     removeRoute(route) {
       this.createdRoutes.splice(
@@ -1407,6 +1466,10 @@ export default {
         1
       );
     },
+    addCals(route) {
+      return calculateCaloriesForRoute(route);
+    }
+    
   },
   computed: {
     totalCalories() {
