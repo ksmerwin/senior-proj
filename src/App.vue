@@ -36,6 +36,7 @@
       "  
       class="route" v-for="route in createdRoutes" :key="route.id">
       {{route.label}}
+      {{ route.calories}}
         <span class="remove" @click="removeRoute(route)">X</span>
       </li>
     </ul>
@@ -1449,10 +1450,16 @@ const calculateCaloriesForRoute = (route) => {
   return mapDataLookup(route.start.id, route.end.id).calories;
 };
 const createRoute = (startBuilding, endBuilding) => {
+  let calories = mapDataLookup(startBuilding.id, endBuilding.id).calories;
+  let minutes = mapDataLookup(startBuilding.id, endBuilding.id).minutes;
+  let miles = mapDataLookup(startBuilding.id, endBuilding.id).miles;
   return {
     id: Date.now(),
     label: `${startBuilding.name} to ${endBuilding.name}`,
     route: { start: startBuilding, end: endBuilding },
+    calories: calories,
+    minutes: minutes,
+    miles: miles
   };
 };
 export default {
